@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>B.L.O.O.M | Something New & Used Vintage</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --cream-dark: #ede7d9;
+    --olive: #4a5240;
+    --olive-light: #6b7560;
+    --olive-pale: #e8ead4;
+    --rust: #8b4a3c;
+    --rust-light: #c4705f;
+    --warm-brown: #5c3d2e;
+    --text: #2a2a2a;
+    --text-mid: #555;
+    --text-light: #888;
+    --white: #ffffff;
+    --border: #e0d8cc;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    max-width: 430px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP NAV ── */
+  .top-nav {
+    position: fixed;
+    top: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 430px;
+    z-index: 100;
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .brand-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+
+  .brand-sub {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--olive-light);
+  }
+
+  .back-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .back-link svg { width: 18px; height: 18px; stroke: var(--text); fill: none; stroke-width: 2; }
+
+  .content { padding-top: 64px; padding-bottom: 90px; }
+
+  /* ── BLOOM HERO ── */
+  .bloom-hero {
+    padding: 28px 20px 22px;
+    background: var(--olive-pale);
+    border-bottom: 1px solid var(--border);
+  }
+  .bloom-mark {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+    letter-spacing: 4px;
+    color: var(--olive);
+    margin-bottom: 6px;
+  }
+  .bloom-tagline {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.35;
+    color: var(--text);
+  }
+
+  /* ── MISSION ── */
+  .bloom-section {
+    margin: 24px 16px 0;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 14px;
+    border: 1px solid var(--border);
+  }
+  .bloom-section h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+  .bloom-section p {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.75;
+  }
+
+  /* ── INITIATIVE CARD ── */
+  .initiative-card {
+    margin: 20px 16px 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--white);
+  }
+  .initiative-badge {
+    display: inline-block;
+    background: var(--olive);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin: 16px 0 0 16px;
+  }
+  .initiative-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 19px;
+    color: var(--text);
+    margin: 10px 16px 4px;
+  }
+  .initiative-card .sub {
+    font-size: 12.5px;
+    color: var(--text-mid);
+    margin: 0 16px 14px;
+    line-height: 1.6;
+  }
+  .initiative-card img {
+    width: 100%;
+    display: block;
+  }
+
+  /* ── DONATE STRIP ── */
+  .donate-strip {
+    margin: 20px 16px 0;
+    padding: 22px 20px;
+    background: var(--olive);
+    border-radius: 14px;
+    text-align: center;
+  }
+  .donate-strip p {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+  .donate-btn {
+    display: inline-block;
+    background: var(--white);
+    color: var(--olive);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+
+  .bloom-note {
+    margin: 18px 16px 0;
+    font-size: 11px;
+    color: var(--text-light);
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* ── BOTTOM NAV (shared with homepage) ── */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 430px;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    display: flex;
+    z-index: 100;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 0 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+  }
+  .nav-item svg { width: 22px; height: 22px; stroke: var(--text-light); fill: none; stroke-width: 1.5; }
+  .nav-item span { font-size: 10px; color: var(--text-light); font-weight: 500; }
+  .nav-item.active svg { stroke: var(--olive); }
+  .nav-item.active span { color: var(--olive); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="brand">
+    <span class="brand-name">Something New & Used</span>
+    <span class="brand-sub">Vintage</span>
+  </div>
+  <a class="back-link" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back
+  </a>
+</nav>
+
+<div class="content">
+
+  <div class="bloom-hero">
+    <div class="bloom-mark">B.L.O.O.M</div>
+    <div class="bloom-tagline">Building Local Opportunities<br>Through Outreach &amp; Mobility</div>
+  </div>
+
+  <div class="bloom-section">
+    <h3>Our Mission</h3>
+    <p>Our mission is to reduce textile waste through reuse, repurposing and creative solutions. Creating pathways to creativity, confidence and opportunities. By giving textiles a second life, we give people a chance to develop skills to express themselves and access resources that can help them thrive.</p>
+  </div>
+
+  <div class="initiative-card">
+    <span class="initiative-badge">Support Our Growth &middot; 1st Initiative</span>
+    <h3>Professional Closet</h3>
+    <p class="sub">A free service for women entering the workforce.</p>
+    <img src="images/bloom-closet.jpg" alt="Professional Closet clothing rack">
+  </div>
+
+  <div class="donate-strip">
+    <p>Learn more<br>and donate</p>
+    <a class="donate-btn" href="https://www.crowdfunder.com/p/c21a38fa8c3b90b95599f635fee3715d" target="_blank" rel="noopener">Support B.L.O.O.M</a>
+  </div>
+
+  <p class="bloom-note">Something New &amp; Used Vintage proudly supports the B.L.O.O.M initiative.</p>
+
+</div>
+
+<nav class="bottom-nav">
+  <a class="nav-item" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <span>Home</span>
+  </a>
+  <a class="nav-item" href="index.html#shop">
+    <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    <span>Shop</span>
+  </a>
+  <a class="nav-item active" href="bloom.html">
+    <svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+    <span>BLOOM</span>
+  </a>
+  <a class="nav-item" href="index.html#account">
+    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <span>Account</span>
+  </a>
+</nav>
+
+</body>
+</html>
